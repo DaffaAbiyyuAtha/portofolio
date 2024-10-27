@@ -114,10 +114,10 @@ function About() {
         <div className="w-1/2 p-32 fixed">
           <div className="flex flex-col items-center gap-5 mb-14">
             <img src={Foto} alt="" className="max-w-64"/>
-            <div className="text-[#C6CBD7] text-6xl">
+            <div className="text-[#C6CBD7] text-4xl">
               Daffa Abiyyu Atha
             </div>
-            <div className="text-[#C6CBD7] text-2xl">
+            <div className="text-[#C6CBD7] text-xl">
               Full Stack Web Developer
             </div>
           </div>
