@@ -5,7 +5,7 @@ import Project1 from "../assets/img/project1.png"
 import Project2 from "../assets/img/project2.png"
 import Project3 from "../assets/img/project3.jpg"
 import Project4 from "../assets/img/project4.png"
-import { FaGithub, FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa6";
 
 function About() {
   const [more1, setMore1] = React.useState(true);
@@ -64,7 +64,7 @@ function About() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after 2 seconds
+      setLoading(false); 
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -84,6 +84,11 @@ function About() {
   const about = () => {
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const email = "daffaabiyyu7861@gmail.com"; 
+  const subject = "portofolio"; 
+  const body = "Halo, saya melihat portofolio Anda dan sangat tertarik. Saya ingin menanyakan beberapa informasi lebih lanjut.";
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   return (
     <div className="">
@@ -153,6 +158,9 @@ function About() {
           </a>
           <a href="https://www.instagram.com/daffaabiyyuatha" className="hover:text-[#C6CBD7]">
            <FaInstagram className="w-5 h-5"/>
+          </a>
+          <a href={gmailLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#C6CBD7]">
+           <FaEnvelope className="w-5 h-5"/>
           </a>
         </div>
         <div className="w-1/2">
