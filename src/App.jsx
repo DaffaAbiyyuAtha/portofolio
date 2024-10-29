@@ -1,7 +1,8 @@
 import React from "react";
 import './App.css';
 import About from "./page/About";
-import Index from "./page/Index"
+import Index from "./page/Index";
+import Contact from "./page/Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -12,7 +13,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />
-  }
+  },
+  {
+    path: "/contact",
+    element: <Contact />
+  },
 ]);
 
 function App() {

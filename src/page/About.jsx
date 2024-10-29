@@ -5,13 +5,15 @@ import Project1 from "../assets/img/project1.png"
 import Project2 from "../assets/img/project2.png"
 import Project3 from "../assets/img/project3.jpg"
 import Project4 from "../assets/img/project4.png"
-import { FaGithub, FaLinkedinIn, FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa6";
+import Project5 from "../assets/img/project5.png"
+import { FaGithub, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa6";
 
 function About() {
   const [more1, setMore1] = React.useState(true);
   const [more2, setMore2] = React.useState(true);
   const [more3, setMore3] = React.useState(true);
   const [more4, setMore4] = React.useState(true);
+  const [more5, setMore5] = React.useState(true);
   const navigate = useNavigate();
   const [loading, setLoading] = React.useState(true);
   const aboutRef = useRef(null);
@@ -27,6 +29,7 @@ function About() {
       setMore2(true)
       setMore3(true)
       setMore4(true)
+      setMore5(true)
     } else {
       setMore1(true)
     }
@@ -37,6 +40,7 @@ function About() {
       setMore2(false)
       setMore3(true)
       setMore4(true)
+      setMore5(true)
     } else {
       setMore2(true)
     }
@@ -47,6 +51,7 @@ function About() {
       setMore2(true)
       setMore3(false)
       setMore4(true)
+      setMore5(true)
     } else {
       setMore3(true)
     }
@@ -57,8 +62,20 @@ function About() {
       setMore2(true)
       setMore3(true)
       setMore4(false)
+      setMore5(true)
     } else {
       setMore4(true)
+    }
+  }
+  function open5() {
+    if (more5 === true) {
+      setMore1(true)
+      setMore2(true)
+      setMore3(true)
+      setMore4(true)
+      setMore5(false)
+    } else {
+      setMore5(true)
     }
   }
 
@@ -75,6 +92,14 @@ function About() {
       navigate(path); 
       setLoading(false); 
     }, 2000); 
+  };
+
+  const handleOpenCV = () => {
+    setLoading(true);
+    setTimeout(() => {
+      window.open("/src/assets/pdf/CV.pdf", "_blank");
+      setLoading(false)
+    }, 2000);
   };
   
 
@@ -97,9 +122,9 @@ function About() {
           <div className="spinner"></div>
         </div>
       )}
-      <div className="flex justify-end w-full fixed py-10 px-32">
+      <div className="flex gap-5 justify-end w-full fixed py-10 px-32">
         <div className="flex gap-5 bg-[#191B33] py-4 px-7 rounded-full shadow-xl">
-        <button 
+          <button 
             onClick={() => handleNavigation("/")} 
             className="text-[#C6CBD7] hover:text-[#00F3D5] hover:underline">
               Home
@@ -110,10 +135,15 @@ function About() {
             disabled>
               About Me
           </button>
-          <button className="text-[#C6CBD7] hover:underline hover:text-[#00F3D5]">
+          <button 
+            onClick={() => handleNavigation("/contact")}
+            className="text-[#C6CBD7] hover:underline hover:text-[#00F3D5]">
             Contact
           </button>
         </div>
+        <button onClick={handleOpenCV} className="p-4 bg-[#10273B] text-[#00F3D5] hover:bg-[#00F3D5] hover:text-[#12122B] rounded-full">
+          CV
+        </button>
       </div>
       <div className="flex">
         <div className="w-1/2 p-32 fixed">
@@ -153,14 +183,8 @@ function About() {
           <a href="https://www.linkedin.com/in/daffa-abiyyu/" className="hover:text-[#C6CBD7]">
            <FaLinkedinIn className="w-5 h-5"/>
           </a>
-          <a href="https://wa.me/6281249704047?text=Halo,%20saya%20melihat%20portofolio%20Anda%20dan%20sangat%20tertarik.%20Saya%20ingin%20menanyakan%20beberapa%20informasi%20lebih%20lanjut" className="hover:text-[#C6CBD7]">
-           <FaWhatsapp className="w-5 h-5"/>
-          </a>
           <a href="https://www.instagram.com/daffaabiyyuatha" className="hover:text-[#C6CBD7]">
            <FaInstagram className="w-5 h-5"/>
-          </a>
-          <a href={gmailLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#C6CBD7]">
-           <FaEnvelope className="w-5 h-5"/>
           </a>
         </div>
         <div className="w-1/2">
@@ -284,6 +308,34 @@ function About() {
                   </div>
                 )}
                 <button onClick={open4} className="text-[#00F3D5] text-sm mb-3">See More</button>
+                <div className="flex w-full overflow-x-scroll scrollbar-hide text-sm gap-2">
+                  <div className="flex gap-2 flex-shrink-0">
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">ReactJS</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Golang</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Tailwind</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">PostgreSQL</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-12 mb-5 hover:bg-[#191B33] hover:p-4 hover:rounded-xl hover:shadow-xl group">
+              <div className="max-w-64 min-w-[128px]">
+                <img src={Project5} alt="" className="w-full h-auto" />
+              </div>
+              <div>
+                <div className="text-[#C6CBD7] text-xl mb-3 group-hover:text-[#00F3D5]">Laris Store</div>
+                {more5 ? (
+                  <div className="text-[#575D77] text-sm">
+                    Welcome to Laris Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. La ...
+                  </div>
+                ) :  (
+                  <div className="text-[#575D77] text-sm">
+                    Welcome to Laris Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. Laris Store is designed to facilitate users in making online purchases efficiently and conveniently. The platform enables users to easily access, browse, and purchase products, supported by a reliable backend that ensures smooth and uninterrupted service.
+                    <br /><br />
+                    With a user-friendly interface and a straightforward purchasing process, Laris Store provides an engaging shopping experience for customers. Additionally, the product management features allow administrators to efficiently manage the online store. This project serves as an ideal solution for small and medium enterprises to effectively market their products and enhance their visibility in the digital landscape.
+                  </div>
+                )}
+                <button onClick={open5} className="text-[#00F3D5] text-sm mb-3">See More</button>
                 <div className="flex w-full overflow-x-scroll scrollbar-hide text-sm gap-2">
                   <div className="flex gap-2 flex-shrink-0">
                     <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">ReactJS</div>
