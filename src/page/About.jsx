@@ -97,7 +97,7 @@ function About() {
   const handleOpenCV = () => {
     setLoading(true);
     setTimeout(() => {
-      window.open("/src/assets/pdf/CV.pdf", "_blank");
+      window.open("/pdf/CV.pdf", "_blank");
       setLoading(false)
     }, 2000);
   };
