@@ -46,7 +46,7 @@ function Index() {
   const handleOpenCV = () => {
     setLoading(true);
     setTimeout(() => {
-      window.open("/pdf/CV.pdf", "_blank");
+      window.open("/CV.pdf", "_blank");
       setLoading(false)
     }, 2000);
   };
