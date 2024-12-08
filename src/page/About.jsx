@@ -338,10 +338,10 @@ function About() {
                 <button onClick={open5} className="text-[#00F3D5] text-sm mb-3">See More</button>
                 <div className="flex w-full overflow-x-scroll scrollbar-hide text-sm gap-2">
                   <div className="flex gap-2 flex-shrink-0">
-                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">ReactJS</div>
-                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Golang</div>
-                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Tailwind</div>
-                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">PostgreSQL</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Laravel 7</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">PHP</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Vue JS</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Xampp</div>
                   </div>
                 </div>
               </div>

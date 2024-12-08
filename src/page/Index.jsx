@@ -248,7 +248,7 @@ function Index() {
             <div ref={ftRef} className="flex justify-center w-full items-center">
               <div className="mt-10 text-[#C6CBD7] rounded-2xl border-2 max-w-[640px] p-10">
                 <div className="flex w-full justify-center mb-12 text-2xl">
-                  Fazztrack
+                  Build With Angga
                 </div>
                 <div className="flex w-full justify-center items-center">
                   <div className="text-center max-w-[600px]">
@@ -266,7 +266,7 @@ function Index() {
             <div ref={bwaRef} className="flex justify-center w-full items-center">
               <div className="mt-10 text-[#C6CBD7] rounded-2xl border-2 max-w-[640px] p-10">
                 <div className="flex w-full justify-center mb-12 text-2xl">
-                  Build With Angga
+                  FazzTrack
                 </div>
                 <div className="flex w-full justify-center items-center">
                   <div className="text-center max-w-[600px]">
