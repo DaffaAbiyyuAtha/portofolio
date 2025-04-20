@@ -122,7 +122,7 @@ function Index() {
               <div className="spinner"></div>
           </div>
         )}
-      <div className="flex gap-5 justify-end w-full fixed py-10 px-32">
+      <div className="flex gap-5 justify-end w-full fixed py-10 px-32 z-50">
         <div className="flex gap-5 bg-[#191B33] py-4 px-7 rounded-full shadow-xl">
           <button 
             onClick={() => handleNavigation("/")} 
@@ -170,9 +170,6 @@ function Index() {
           </a>
           <a href="https://www.linkedin.com/in/daffa-abiyyu/" className="hover:text-[#C6CBD7]">
             <FaLinkedinIn className="w-5 h-5"/>
-          </a>
-          <a href="https://wa.me/6281249704047?text=Halo,%20saya%20melihat%20portofolio%20Anda%20dan%20sangat%20tertarik.%20Saya%20ingin%20menanyakan%20beberapa%20informasi%20lebih%20lanjut" className="hover:text-[#C6CBD7]">
-            <FaWhatsapp className="w-5 h-5"/>
           </a>
           <a href="https://www.instagram.com/daffaabiyyuatha" className="hover:text-[#C6CBD7]">
             <FaInstagram className="w-5 h-5"/>

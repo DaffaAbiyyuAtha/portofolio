@@ -6,6 +6,7 @@ import Project2 from "../assets/img/project2.png"
 import Project3 from "../assets/img/project3.jpg"
 import Project4 from "../assets/img/project4.png"
 import Project5 from "../assets/img/project5.png"
+import Project6 from "../assets/img/project6.png"
 import { FaGithub, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa6";
 
 function About() {
@@ -14,6 +15,7 @@ function About() {
   const [more3, setMore3] = React.useState(true);
   const [more4, setMore4] = React.useState(true);
   const [more5, setMore5] = React.useState(true);
+  const [more6, setMore6] = React.useState(true);
   const navigate = useNavigate();
   const [loading, setLoading] = React.useState(true);
   const aboutRef = useRef(null);
@@ -30,6 +32,7 @@ function About() {
       setMore3(true)
       setMore4(true)
       setMore5(true)
+      setMore6(true)
     } else {
       setMore1(true)
     }
@@ -41,6 +44,7 @@ function About() {
       setMore3(true)
       setMore4(true)
       setMore5(true)
+      setMore6(true)
     } else {
       setMore2(true)
     }
@@ -52,6 +56,7 @@ function About() {
       setMore3(false)
       setMore4(true)
       setMore5(true)
+      setMore6(true)
     } else {
       setMore3(true)
     }
@@ -63,6 +68,7 @@ function About() {
       setMore3(true)
       setMore4(false)
       setMore5(true)
+      setMore6(true)
     } else {
       setMore4(true)
     }
@@ -73,9 +79,22 @@ function About() {
       setMore2(true)
       setMore3(true)
       setMore4(true)
+      setMore6(true)
       setMore5(false)
     } else {
       setMore5(true)
+    }
+  }
+  function open6() {
+    if (more6 === true) {
+      setMore1(true)
+      setMore2(true)
+      setMore3(true)
+      setMore4(true)
+      setMore5(true)
+      setMore6(false)
+    } else {
+      setMore6(true)
     }
   }
 
@@ -198,16 +217,50 @@ function About() {
               About Me
             </div>
             <div className="text-[#575D77] text-sm mb-2">
-              Daffa is a beginner who is currently pursuing a career in the programming world with a specialization as a full-stack web developer. He is skilled in using JavaScript and Go programming languages, as well as proficient in HTML, React.js, Tailwind CSS, and UI/UX Design. His educational background is in informatics, provides a strong foundation for technical understanding.
+              Daffa is a Full-Stack Web Developer with expertise in JavaScript and Go, specializing in building
+              scalable and efficient web applications. Proficient in React.js, Tailwind CSS, and UI/UX design, he
+              has a strong foundation in both frontend and backend development. With a background in
+              Informatics and hands-on experience from the Fazztrack Bootcamp, he has worked on real-world
+              projects such a
             </div>
             <div className="text-[#575D77] text-sm mb-10">
-              He is also a graduate of the Fazztrack Bootcamp, where he learned in depth how to become a full-stack developer with a focus on JavaScript and Go. This experience strengthened his technical skills and gave him a deeper understanding of application development from both the frontend and backend perspectives. His ambition is to continue growing in the industry and contribute through effective and innovative solutions. He is excited to join and grow with a team that drives technological innovation.
+              Passionate about continuous learning and innovation, Daffa thrives in collaborative environments
+              where he can contribute effective and scalable solutions. He is eager to leverage his skills to help
+              businesses optimize their digital presence and technological infrastructure.
             </div>
             <div 
               id="project"
               ref={projectRef} 
               className="text-[#C6CBD7] text-2xl underline mb-5">
               Project
+            </div>
+            <div className="flex gap-12 mb-5 hover:bg-[#191B33] hover:p-4 hover:rounded-xl hover:shadow-xl group">
+              <div className="max-w-64 min-w-[128px]">
+                <img src={Project6} alt="" className="w-full h-auto" />
+              </div>
+              <div>
+                <a href="http://103.93.58.89:20201/" className="text-[#C6CBD7] text-xl mb-3 group-hover:text-[#00F3D5]">Laris Store</a>
+                {more6 ? (
+                  <div className="text-[#575D77] text-sm">
+                    Laris Store is a modern e-commerce platform designed to simplify the buying and selling of electronic products such as smartphones, compute ...
+                  </div>
+                ) :  (
+                  <div className="text-[#575D77] text-sm">
+                    Laris Store is a modern e-commerce platform designed to simplify the buying and selling of electronic products such as smartphones, computers, TVs, and other electronic devices. This project is built with a frontend powered by ReactJS and Tailwind CSS, and a robust backend using Golang and PostgreSQL.
+                    <br /><br />
+                    Laris Store allows users to browse a variety of electronic products, add items to their cart, proceed to checkout, and complete secure payments with ease. All these processes are supported by a stable and efficient backend system, ensuring a smooth and reliable shopping experience.
+                  </div>
+                )}
+                <button onClick={open6} className="text-[#00F3D5] text-sm mb-3">See More</button>
+                <div className="flex w-full overflow-x-scroll scrollbar-hide text-sm gap-2">
+                  <div className="flex gap-2 flex-shrink-0">
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">ReactJS</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Golang</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">Tailwind</div>
+                    <div className="text-[#00F3D5] bg-[#10273B] py-2 px-4 rounded-full">PostgreSQL</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="flex gap-12 mb-5 hover:bg-[#191B33] hover:p-4 hover:rounded-xl hover:shadow-xl group">
               <div className="max-w-64 min-w-[128px]">
@@ -323,16 +376,16 @@ function About() {
                 <img src={Project5} alt="" className="w-full h-auto" />
               </div>
               <div>
-                <div className="text-[#C6CBD7] text-xl mb-3 group-hover:text-[#00F3D5]">Laris Store</div>
+                <div className="text-[#C6CBD7] text-xl mb-3 group-hover:text-[#00F3D5]">InHome Store</div>
                 {more5 ? (
                   <div className="text-[#575D77] text-sm">
-                    Welcome to Laris Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. La ...
+                    Welcome to InHome Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. La ...
                   </div>
                 ) :  (
                   <div className="text-[#575D77] text-sm">
-                    Welcome to Laris Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. Laris Store is designed to facilitate users in making online purchases efficiently and conveniently. The platform enables users to easily access, browse, and purchase products, supported by a reliable backend that ensures smooth and uninterrupted service.
+                    Welcome to InHome Store! This project combines a robust backend with a sleek and responsive frontend, powered by Laravel 7, PHP, and XAMPP. InHome Store is designed to facilitate users in making online purchases efficiently and conveniently. The platform enables users to easily access, browse, and purchase products, supported by a reliable backend that ensures smooth and uninterrupted service.
                     <br /><br />
-                    With a user-friendly interface and a straightforward purchasing process, Laris Store provides an engaging shopping experience for customers. Additionally, the product management features allow administrators to efficiently manage the online store. This project serves as an ideal solution for small and medium enterprises to effectively market their products and enhance their visibility in the digital landscape.
+                    With a user-friendly interface and a straightforward purchasing process, InHome Store provides an engaging shopping experience for customers. Additionally, the product management features allow administrators to efficiently manage the online store. This project serves as an ideal solution for small and medium enterprises to effectively market their products and enhance their visibility in the digital landscape.
                   </div>
                 )}
                 <button onClick={open5} className="text-[#00F3D5] text-sm mb-3">See More</button>
